@@ -7,6 +7,7 @@ import '../assets/styles/LunchedIn.css';
 import users from '../users-database';
 import { DDSDropdown } from "@dds/react";
 
+//to do: fix title, add hover, fix time
 const LunchedIn = () => {
 
     const [options] = useState([
@@ -23,6 +24,7 @@ const LunchedIn = () => {
 
     const timeRef = useRef(null);
     const [selectedLunchTime, setSelectedLunchTime] = useState(null);
+    const [hoveredUserIdL, setHoveredUserIdL] = useState(null);
 
     useEffect(() => {  
         console.log(timeRef.current.value); 
@@ -48,8 +50,14 @@ const LunchedIn = () => {
             </div>
             <div className="user-icons-l">
                 {users.filter(user => user.lunch_time === selectedLunchTime).map(user => (
-                    <div className="user-l" key={user.id}>
-                        <img src={placeholder}></img>
+                    <div className="user-l" 
+                        key={user.id}
+                        onMouseOver={() => setHoveredUserIdL(user.id)}
+                        onMouseOut={() => setHoveredUserIdL(null)}
+                    >
+                        <img src={user.profile_pic ? user.profile_pic : placeholder}></img>
+                        <p className='hover-user-l'>Ciao</p>
+                        
                     </div>
                 ))}
             </div>

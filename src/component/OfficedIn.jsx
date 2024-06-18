@@ -5,6 +5,7 @@ import '../assets/styles/OfficedIn.css';
 import { DDSSwitch } from "@dds/react";
 import users from '../users-database';
 
+//to do: dropdown for days, graph, make pictures same dimensions, choose better colors
 const OfficedIn = () => {
 
     const switchRef = useRef(null);
@@ -21,6 +22,7 @@ const OfficedIn = () => {
     const [statusColors, setStatusColors] = useState({});
     const [borderColors, setBorderColors] = useState({});
     const [visibility, setVisibility] = useState({});
+    const [hoveredUserId, setHoveredUserId] = useState(null);
 
     useEffect(() => { 
         const checkTags =() => {
@@ -76,12 +78,19 @@ const OfficedIn = () => {
                 <DDSSwitch ref={switchRef} displayControlValues={false}/>
             </div>
             <div className="user-icons">
-                {users.map(user => (
-                    <div className="user" key={user.id}>
-                        <img src={user.profile_pic ? user.profile_pic : placeholder} style={{borderColor: borderColors[user.id] || 'white'}}></img>
-                        <div className="status" style={{backgroundColor: statusColors[user.id] || 'white', visibility: visibility[user.id] || 'visible'}}></div>
-                    </div>
-                ))}
+            {users.map(user => (
+                <div 
+                    className="user" 
+                    key={user.id} 
+                    onMouseOver={() => setHoveredUserId(user.id)}
+                    onMouseOut={() => setHoveredUserId(null)}
+                >
+                    <img src={user.profile_pic ? user.profile_pic : placeholder} style={{borderColor: borderColors[user.id] || 'white'}}></img>
+                    <div className="status" style={{backgroundColor: statusColors[user.id] || 'white', visibility: visibility[user.id] || 'visible'}}></div>
+                    <p className='hover-user' style={{opacity: hoveredUserId === user.id ? 1 : 0}}>{user.name}</p>
+                </div>
+            ))}
+
             </div>
             <div className="bar-chart"></div>
         </div>

@@ -76,14 +76,13 @@ const OfficedIn = () => {
                 <DDSSwitch ref={switchRef} displayControlValues={false}/>
             </div>
             <div className="user-icons">
-            {users.map(user => (
-                <div className="user" key={user.id}>
-                    <img src={placeholder} style={{borderColor: borderColors[user.id] || 'white'}}></img>
-                    <div className="status" style={{backgroundColor: statusColors[user.id] || 'white', visibility: visibility[user.id] || 'visible'}}></div>
-                </div>
-            ))}
-        </div>
-
+                {users.map(user => (
+                    <div className="user" key={user.id}>
+                        <img src={placeholder} style={{borderColor: borderColors[user.id] || 'white'}}></img>
+                        <div className="status" style={{backgroundColor: statusColors[user.id] || 'white', visibility: visibility[user.id] || 'visible'}}></div>
+                    </div>
+                ))}
+            </div>
             <div className="bar-chart"></div>
         </div>
     );

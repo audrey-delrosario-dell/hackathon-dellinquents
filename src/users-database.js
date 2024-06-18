@@ -52,7 +52,7 @@ const users = [
         "name": "Bob",
         "email": "bob@example.com",
         "profile_pic": "",
-        "lunch_time": "1:00 PM",
+        "lunch_time": "1100",
         "office_status": {
             "Monday": true,
             "Tuesday": true,

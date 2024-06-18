@@ -25,9 +25,9 @@ const LunchedIn = () => {
     const [selectedLunchTime, setSelectedLunchTime] = useState(null);
 
     useEffect(() => {  
-        console.log(timeRef.current); 
+        console.log(timeRef.current.value); 
         setSelectedLunchTime(timeRef.current.value);
-    }, []);
+    }, [timeRef.current.value]);
 
 
 
@@ -43,14 +43,13 @@ const LunchedIn = () => {
                     <img src={item} className='title-icon'/>
                 </div>     
             </div>
-            <div className="user-icons">
-            {users.filter(user => user.lunch_time === selectedLunchTime).map(user => (
-                <div className="user" key={user.id}>
-                    <img src={placeholder} style={{borderColor: borderColors[user.id] || 'white'}}></img>
-                    <div className="status" style={{backgroundColor: statusColors[user.id] || 'white', visibility: visibility[user.id] || 'visible'}}></div>
-                </div>
-            ))}
-        </div>
+            <div className="user-icons-l">
+                {users.filter(user => user.lunch_time === selectedLunchTime).map(user => (
+                    <div className="user-l" key={user.id}>
+                        <img src={placeholder}></img>
+                    </div>
+                ))}
+            </div>
         </div>
     );
 };

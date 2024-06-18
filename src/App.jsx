@@ -9,13 +9,6 @@ function App() {
   return (
     <div>
       <Header/>
-      <div className="splitScreen">
-        <LunchedIn/>
-        <OfficedIn/>
-        <MyStatus/>
-        <MyLinks/>
-
-      </div>
     </div>
   )
 }

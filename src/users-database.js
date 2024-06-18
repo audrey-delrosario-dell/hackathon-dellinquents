@@ -1,3 +1,11 @@
+import aisling from "./assets/images/pic-aisling.jpg";
+import alannah from "./assets/images/pic-alannah.jpg";
+import audrey from "./assets/images/pic-audrey.png";
+import beatrice from "./assets/images/pic-beatrice.jpg";
+import daniel from "./assets/images/pic-daniel.jpg";
+import michael from "./assets/images/pic-michael.jpg";
+import sajida from "./assets/images/pic-sajida.jpg";
+
 const users = [
     {
         "id" : "1",
@@ -26,7 +34,7 @@ const users = [
         "id" : "2",
         "name": "Aisling Cooke",
         "email": "Aisling.Cooke@dell.com",
-        "profile_pic": "../assets/images/pic-aisling.jpg",
+        "profile_pic": aisling,
         "lunch_time": "1300",
         "office_status": {
             "Monday": true,
@@ -50,7 +58,7 @@ const users = [
         "id" : "3",
         "name": "Alannah Bennet",
         "email": "Alannah.Bennet@dell.com",
-        "profile_pic": "../assets/images/pic-alannah.jpg",
+        "profile_pic": alannah,
         "lunch_time": "1230",
         "office_status": {
             "Monday": false,
@@ -74,7 +82,7 @@ const users = [
         "id" : "4",
         "name": "Audrey del Rosario",
         "email": "Audrey.delRosario@dell.com",
-        "profile_pic": "../assets/images/pic-audrey.png",
+        "profile_pic": audrey,
         "lunch_time": "1300",
         "office_status": {
             "Monday": false,
@@ -98,7 +106,7 @@ const users = [
         "id" : "5",
         "name": "Beatrice Saviozzi",
         "email": "Beatrice.Saviozzi@dell.com",
-        "profile_pic": "../assets/images/pic-beatrice.JPG",
+        "profile_pic": beatrice,
         "lunch_time": "1330",
         "office_status": {
             "Monday": false,
@@ -122,7 +130,7 @@ const users = [
         "id" : "6",
         "name": "Daniel Williams",
         "email": "Daniel.Williams@dell.com",
-        "profile_pic": "../assets/images/pic-daniel.jpg",
+        "profile_pic": daniel,
         "lunch_time": "1300",
         "office_status": {
             "Monday": true,
@@ -146,7 +154,7 @@ const users = [
         "id" : "7",
         "name": "Sajida Niazi",
         "email": "Sajida.Niazi@dell.com",
-        "profile_pic": "../assets/images/pic-sajida.jpg",
+        "profile_pic": sajida,
         "lunch_time": "1230",
         "office_status": {
             "Monday": true,
@@ -192,7 +200,7 @@ const users = [
         "id" : "9",
         "name": "Michael Dell",
         "email": "Michael.Dell@dell.com",
-        "profile_pic": "../assets/images/pic-michael.jpg",
+        "profile_pic": michael,
         "lunch_time": "1230",
         "office_status": {
             "Monday": true,

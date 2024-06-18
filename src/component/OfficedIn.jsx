@@ -78,7 +78,7 @@ const OfficedIn = () => {
             <div className="user-icons">
                 {users.map(user => (
                     <div className="user" key={user.id}>
-                        <img src={placeholder} style={{borderColor: borderColors[user.id] || 'white'}}></img>
+                        <img src={user.profile_pic ? user.profile_pic : placeholder} style={{borderColor: borderColors[user.id] || 'white'}}></img>
                         <div className="status" style={{backgroundColor: statusColors[user.id] || 'white', visibility: visibility[user.id] || 'visible'}}></div>
                     </div>
                 ))}

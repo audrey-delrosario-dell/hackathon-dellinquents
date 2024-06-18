@@ -26,10 +26,13 @@ const LunchedIn = () => {
 
     useEffect(() => {  
         console.log(timeRef.current.value); 
-        setSelectedLunchTime(timeRef.current.value);
-    }, [timeRef.current.value]);
-
-
+        
+        const handleTimeChange =() => {
+            setSelectedLunchTime(timeRef.current.value);
+        };
+    
+        handleTimeChange();
+    }, [timeRef.current]);
 
     return (
         <div className="lunched-in">

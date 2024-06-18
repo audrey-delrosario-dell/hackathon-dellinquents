@@ -1,0 +1,8 @@
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.col {
+    margin-right: 10px; /* Add some spacing between columns */
+}

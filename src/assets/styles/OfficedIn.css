@@ -12,13 +12,23 @@
 }
 
 .user {
-    text-align: center;
+    text-align: center;    
 }
 
 .user img {
     display: block;
     margin: 0 auto;
-    width: 70px;
+    width: 75px;
     height: auto;
+    border: 3px solid #9b2525;
+    border-radius: 50%;
 }
 
+.status {
+    text-align: center;
+    background-color: #9b2525;
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    transform: translateY(-375%) translateX(450%);
+}

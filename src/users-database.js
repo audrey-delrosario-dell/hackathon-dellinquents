@@ -2,7 +2,7 @@ const users = [
     {
         "name": "Alice",
         "email": "alice@example.com",
-        "profile_pic": "[1](https://example.com/alice.jpg)",
+        "profile_pic": "",
         "lunch_time": "12:30 PM",
         "office_status": {
             "Monday": True,
@@ -24,7 +24,7 @@ const users = [
     {
         "name": "Bob",
         "email": "bob@example.com",
-        "profile_pic": "[2](https://example.com/bob.jpg)",
+        "profile_pic": "",
         "lunch_time": "1:00 PM",
         "office_status": {
             "Monday": True,

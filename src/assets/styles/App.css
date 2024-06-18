@@ -1,0 +1,45 @@
+/* CSS for the 4-grid layout */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  /* Responsive styles for small screens */
+  @media (max-width: 600px) {
+    .grid {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(4, 1fr);
+    }
+  }
+  
+  /* styling for the individual elements */
+  .officedIn {
+    width: 100%;
+    background-color: #832727;
+    padding: 1rem;
+    border: #206abe solid 3px;
+  }
+  
+  .lunchedIn {
+    width: 100%;
+    background-color: #a12020;
+    padding: 1rem;
+    border: #206abe solid 3px;
+  }
+  
+  .myStatus {
+    width: 100%;
+    background-color: #d0d0d0;
+    padding: 1rem;
+    border: #206abe solid 3px;
+  }
+  
+  .links {
+    width: 100%;
+    background-color: #c0c0c0;
+    padding: 1rem;
+    border: #206abe solid 3px;
+  }
+  

@@ -1,8 +1,9 @@
+import '../assets/styles/Header.css'; 
 
 const Header = () => {
     return (
-        <div>
-            <h1>Intern Nexus</h1>
+        <div className="header-container">
+            <h1 className='title'>Intern Nexus</h1>
         </div>
     );
 };

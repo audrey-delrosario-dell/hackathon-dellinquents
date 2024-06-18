@@ -2,14 +2,17 @@ import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 
-function Example() {
+import React from 'react';
+
+const UserMenu = () => {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
   return (
-    <>
+    <div>
+   
       <Button variant="primary" onClick={handleShow}>
         Launch
       </Button>
@@ -23,8 +26,10 @@ function Example() {
           have chosen. Like, text, images, lists, etc.
         </Offcanvas.Body>
       </Offcanvas>
-    </>
+    
+    </div>
   );
-}
+};
 
-export default Example;
+export default UserMenu;
+

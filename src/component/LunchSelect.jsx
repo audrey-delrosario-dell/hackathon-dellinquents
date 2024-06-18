@@ -24,8 +24,8 @@ const LunchSelect = () => {
 
 
     return (
-        <div >
-             <DDSDropdown label={{ children: "Select a time to get lunch", visualIndicator: true }} required options={options} />
+        <div className="custom-dropdown">
+             <DDSDropdown label={{ children: "Select Lunch Time", visualIndicator: true }} required options={options} />
         </div>
     );
 };

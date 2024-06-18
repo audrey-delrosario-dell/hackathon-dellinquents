@@ -1,3 +1,7 @@
+h1 {
+    text-align: center;
+}
+
 .row {
     display: flex;
     justify-content: space-between;
@@ -6,3 +10,9 @@
 .col {
     margin-right: 10px; /* Add some spacing between columns */
 }
+
+
+div.custom-dropdown {
+    width: 180px;
+}
+

@@ -1,16 +1,16 @@
 const users = [
     {
         "id" : "1",
-        "name": "Alice",
-        "email": "alice@example.com",
+        "name": "Adam Zhao Heather",
+        "email": "Adam@example.com",
         "profile_pic": "",
-        "lunch_time": "12:30 PM",
+        "lunch_time": "1230",
         "office_status": {
             "Monday": true,
-            "Tuesday": true,
+            "Tuesday": false,
             "Wednesday": true,
             "Thursday": true,
-            "Friday": true,
+            "Friday": false,
             "Leave": false
         },
         "tags": {
@@ -24,16 +24,16 @@ const users = [
     },
     {
         "id" : "2",
-        "name": "Bob",
-        "email": "bob@example.com",
-        "profile_pic": "",
-        "lunch_time": "1:00 PM",
+        "name": "Aisling Cooke",
+        "email": "Aisling.Cooke@dell.com",
+        "profile_pic": "../assets/images/pic-aisling.jpg",
+        "lunch_time": "1300",
         "office_status": {
             "Monday": true,
             "Tuesday": true,
             "Wednesday": true,
-            "Thursday": true,
-            "Friday": true,
+            "Thursday": false,
+            "Friday": false,
             "Leave": false
         },
         "tags": {
@@ -42,23 +42,22 @@ const users = [
             "snack-tag": false,
             "game-tag": false,
             "working-tag": false,
-            "sweettreat-tag": false,
             "busy-tag": false
         }
     },
 
     {
         "id" : "3",
-        "name": "Bob",
-        "email": "bob@example.com",
-        "profile_pic": "",
-        "lunch_time": "1100",
+        "name": "Alannah Bennet",
+        "email": "Alannah.Bennet@dell.com",
+        "profile_pic": "../assets/images/pic-alannah.jpg",
+        "lunch_time": "1230",
         "office_status": {
-            "Monday": true,
+            "Monday": false,
             "Tuesday": true,
             "Wednesday": true,
             "Thursday": true,
-            "Friday": true,
+            "Friday": false,
             "Leave": false
         },
         "tags": {
@@ -67,49 +66,47 @@ const users = [
             "snack-tag": false,
             "game-tag": false,
             "working-tag": false,
-            "sweettreat-tag": false,
-            "busy-tag": false
+            "busy-tag": true
         }
     },
 
     {
         "id" : "4",
-        "name": "Bob",
-        "email": "bob@example.com",
-        "profile_pic": "",
-        "lunch_time": "1:00 PM",
+        "name": "Audrey del Rosario",
+        "email": "Audrey.delRosario@dell.com",
+        "profile_pic": "../assets/images/pic-audrey.png",
+        "lunch_time": "1300",
         "office_status": {
-            "Monday": true,
+            "Monday": false,
             "Tuesday": true,
             "Wednesday": true,
             "Thursday": true,
-            "Friday": true,
+            "Friday": false,
             "Leave": false
         },
         "tags": {
             "chat-tag": false,
             "coffee-tag": false,
-            "snack-tag": false,
+            "snack-tag": true,
             "game-tag": false,
             "working-tag": false,
-            "sweettreat-tag": false,
             "busy-tag": false
         }
     },
 
     {
         "id" : "5",
-        "name": "Bob",
-        "email": "bob@example.com",
-        "profile_pic": "",
-        "lunch_time": "1:00 PM",
+        "name": "Beatrice Saviozzi",
+        "email": "Beatrice.Saviozzi@dell.com",
+        "profile_pic": "../assets/images/pic-beatrice.JPG",
+        "lunch_time": "1330",
         "office_status": {
-            "Monday": true,
-            "Tuesday": true,
-            "Wednesday": true,
-            "Thursday": true,
-            "Friday": true,
-            "Leave": false
+            "Monday": false,
+            "Tuesday": false,
+            "Wednesday": false,
+            "Thursday": false,
+            "Friday": false,
+            "Leave": true
         },
         "tags": {
             "chat-tag": false,
@@ -117,22 +114,21 @@ const users = [
             "snack-tag": false,
             "game-tag": false,
             "working-tag": false,
-            "sweettreat-tag": false,
             "busy-tag": false
         }
     },
 
     {
         "id" : "6",
-        "name": "Bob",
-        "email": "bob@example.com",
-        "profile_pic": "",
-        "lunch_time": "1:00 PM",
+        "name": "Daniel Williams",
+        "email": "Daniel.Williams@dell.com",
+        "profile_pic": "../assets/images/pic-daniel.jpg",
+        "lunch_time": "1300",
         "office_status": {
             "Monday": true,
             "Tuesday": true,
-            "Wednesday": true,
-            "Thursday": true,
+            "Wednesday": false,
+            "Thursday": false,
             "Friday": true,
             "Leave": false
         },
@@ -141,24 +137,23 @@ const users = [
             "coffee-tag": false,
             "snack-tag": false,
             "game-tag": false,
-            "working-tag": false,
-            "sweettreat-tag": false,
+            "working-tag": true,
             "busy-tag": false
         }
     },
 
     {
         "id" : "7",
-        "name": "Bob",
-        "email": "bob@example.com",
-        "profile_pic": "",
-        "lunch_time": "1:00 PM",
+        "name": "Sajida Niazi",
+        "email": "Sajida.Niazi@dell.com",
+        "profile_pic": "../assets/images/pic-sajida.jpg",
+        "lunch_time": "1230",
         "office_status": {
             "Monday": true,
             "Tuesday": true,
             "Wednesday": true,
-            "Thursday": true,
-            "Friday": true,
+            "Thursday": false,
+            "Friday": false,
             "Leave": false
         },
         "tags": {
@@ -167,19 +162,18 @@ const users = [
             "snack-tag": false,
             "game-tag": false,
             "working-tag": false,
-            "sweettreat-tag": false,
-            "busy-tag": false
+            "busy-tag": true
         }
     },
     {
         "id" : "8",
         "name": "Bob",
-        "email": "bob@example.com",
+        "email": "bob@dell.com",
         "profile_pic": "",
-        "lunch_time": "1:00 PM",
+        "lunch_time": "1100",
         "office_status": {
-            "Monday": true,
-            "Tuesday": true,
+            "Monday": false,
+            "Tuesday": false,
             "Wednesday": true,
             "Thursday": true,
             "Friday": true,
@@ -190,17 +184,16 @@ const users = [
             "coffee-tag": false,
             "snack-tag": false,
             "game-tag": false,
-            "working-tag": false,
-            "sweettreat-tag": false,
+            "working-tag": true,
             "busy-tag": false
         }
     },
     {
         "id" : "9",
-        "name": "Bob",
-        "email": "bob@example.com",
-        "profile_pic": "",
-        "lunch_time": "1:00 PM",
+        "name": "Michael Dell",
+        "email": "Michael.Dell@dell.com",
+        "profile_pic": "../assets/images/pic-michael.jpg",
+        "lunch_time": "1230",
         "office_status": {
             "Monday": true,
             "Tuesday": true,
@@ -214,22 +207,21 @@ const users = [
             "coffee-tag": false,
             "snack-tag": false,
             "game-tag": false,
-            "working-tag": false,
-            "sweettreat-tag": false,
+            "working-tag": true,
             "busy-tag": false
         }
     },
     {
         "id" : "10",
-        "name": "Bob",
-        "email": "bob@example.com",
+        "name": "Jhon Doe",
+        "email": "Jhon.Doe@dell.com",
         "profile_pic": "",
-        "lunch_time": "1:00 PM",
+        "lunch_time": "1330",
         "office_status": {
             "Monday": true,
-            "Tuesday": true,
+            "Tuesday": false,
             "Wednesday": true,
-            "Thursday": true,
+            "Thursday": false,
             "Friday": true,
             "Leave": false
         },
@@ -237,9 +229,8 @@ const users = [
             "chat-tag": false,
             "coffee-tag": false,
             "snack-tag": false,
-            "game-tag": false,
+            "game-tag": true,
             "working-tag": false,
-            "sweettreat-tag": false,
             "busy-tag": false
         }
     }

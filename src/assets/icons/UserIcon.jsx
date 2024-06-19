@@ -1,4 +1,3 @@
-import "./UserIcon.css"; 
 const UserIcon = () => {
     return (
         <div>

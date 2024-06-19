@@ -1,4 +1,3 @@
-import "./MenuIcon.css";
 
 const MenuIcon = () => {
     return (

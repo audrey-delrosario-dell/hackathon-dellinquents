@@ -1,4 +1,3 @@
-import "./LocationIcon.css";
 
 const LocationIcon = () => {
     return (

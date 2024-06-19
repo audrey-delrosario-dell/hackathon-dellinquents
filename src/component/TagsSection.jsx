@@ -13,6 +13,7 @@ const TagsSection = () => {
                 </div>
                 <div className="dds__col--1 dds__col--sm-3 dds__col--md-6 dds__mb-3">
                     <div className="dds-sb__sample-box">
+                        <p>Up for...</p>
                         <TagRadioBtnGroup/>
                     </div>
                 </div>

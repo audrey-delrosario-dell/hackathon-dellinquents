@@ -1,0 +1,11 @@
+.location-icon {
+    display: flex;
+    flex-direction: column;  /* Display the SVG and <h6> tag in a column */
+    align-items: center;  /* Center the items horizontally */
+    text-align: center;  /* Center the text within the <h6> tag */
+}
+
+.location-icon svg {
+    margin-bottom: 10px;  /* Add some spacing between the SVG and <h6> tag */
+}
+

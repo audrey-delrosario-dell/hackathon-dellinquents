@@ -39,7 +39,7 @@ const MyStatus = () => {
 
             <DDSButton kind="secondary" size="sm" onClick={handleClickEdit}>Edit Status</DDSButton>
             {!showSavedBtn && (<DDSButton size="sm" onClick={handleClickSave}>Save Changes</DDSButton>)}
-            {showSavedBtn && (<DDSButton icon="check" iconPlacement="end" size="sm" className="savedBtn" >Saved Changes</DDSButton>)}
+            {showSavedBtn && (<DDSButton icon="check" iconPlacement="end" size="sm" className="savedBtn" >Changes Saved</DDSButton>)}
 
         </div>
 

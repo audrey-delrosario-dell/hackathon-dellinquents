@@ -12,10 +12,9 @@ h1.InterNex {
 }
 
 .right-icons {
-    display: inline-flex;
+    display: flex;
     align-items: center;
-    justify-content: space-around;
-    /* padding: 10px; */
+    justify-content: center;
 }
 
 

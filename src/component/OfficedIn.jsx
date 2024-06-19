@@ -11,12 +11,12 @@ const OfficedIn = () => {
     const switchRef = useRef(null);
     
     const tagColors ={
-        "chat-tag": 'red',
-        "coffee-tag": 'blue',
-        "snack-tag": 'green',
-        "game-tag": 'purple',
-        "working-tag": 'gray',
-        "busy-tag": 'yellow'
+        "chat-tag": '#f69ac6',
+        "coffee-tag": '#e6ac28',
+        "snack-tag": '#0468a1', 
+        "game-tag": '#c0dd78',
+        "working-tag": '#97dcf4',
+        "busy-tag": '#fe6873'
     }
 
     const [borderColors, setBorderColors] = useState({});

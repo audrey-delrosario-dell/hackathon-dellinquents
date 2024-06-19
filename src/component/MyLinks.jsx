@@ -10,11 +10,8 @@ const MyLinks = () => {
 
             <DDSButton className="addLink" size="md">Add New Link</DDSButton>
             <div className='cardsSection'>
-                <p>Put cards here </p>
                 <LinkCards/>
                 <LinkCards/>
-                <p>End cards here </p>
-
             </div>
 
         </div>

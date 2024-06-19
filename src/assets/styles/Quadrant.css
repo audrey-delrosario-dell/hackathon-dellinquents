@@ -1,4 +1,11 @@
 .section {
     background-color: #DCDCDC;
-    padding: 15px;
+    height: 100%;
+    width: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.dds__container-fluid {
+    background-color: red;
 }

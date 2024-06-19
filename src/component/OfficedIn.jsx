@@ -5,7 +5,6 @@ import '../assets/styles/OfficedIn.css';
 import { DDSDropdown, DDSButton, DDSSwitch } from "@dds/react";
 import users from '../users-database';
 
-//to do: make hover better, choose better colors
 const OfficedIn = () => {
 
     const switchRef = useRef(null);
@@ -98,7 +97,7 @@ const OfficedIn = () => {
             </div>
             
             <div className="user-icons">
-            {!remote && users.filter(user => (user.office_status[selectedDay]) || selectedDay === 'All').map(user => (
+            {!remote && users.filter(user => user.office_status[selectedDay] || selectedDay === 'All').map(user => (
                 <div 
                     className="user" 
                     key={user.id} 
@@ -110,7 +109,7 @@ const OfficedIn = () => {
                 </div>
             ))}
 
-            {remote && users.filter(user => ((!user.office_status[selectedDay] && selectedDay !== 'Leave') || selectedDay === 'All')).map(user => (
+            {remote && users.filter(user => (!user.office_status[selectedDay] && !user.office_status['Leave']) || selectedDay === 'All').map(user => (
                 <div 
                     className="user" 
                     key={user.id} 
@@ -121,10 +120,7 @@ const OfficedIn = () => {
                     <p className='hover-user' style={{opacity: hoveredUserId === user.id ? 1 : 0}}>{user.name}</p>
                 </div>
             ))}
-
-            
             </div>
-            <div className="bar-chart"></div>
         </div>
     );
 };

@@ -5,9 +5,9 @@ import menu from '../assets/images/food-menu.png';
 import item from '../assets/images/cover-food.png';
 import '../assets/styles/LunchedIn.css';
 import users from '../users-database';
-import { DDSDropdown, DDSButton } from "@dds/react";
+import { DDSDropdown } from "@dds/react";
 
-//to do: add hover
+//to do: fix title, add hover, fix time
 const LunchedIn = () => {
 
     const [options] = useState([
@@ -24,71 +24,39 @@ const LunchedIn = () => {
 
     const timeRef = useRef(null);
     const [selectedLunchTime, setSelectedLunchTime] = useState(null);
-    const [hoveredMenu, setHoveredMenu] = useState(false);
-    const [hoveredItem, setHoveredItem] = useState(false);
-    const [hoveredUserId, setHoveredUserId] = useState(null);
-
-    const handleTimeChange = () => {
-        setSelectedLunchTime(timeRef.current.value);
-        console.log(selectedLunchTime);
-    }
+    const [hoveredUserIdL, setHoveredUserIdL] = useState(null);
 
     useEffect(() => {  
         console.log(timeRef.current.value); 
-    }, [timeRef]); 
+        
+        const handleTimeChange =() => {
+            setSelectedLunchTime(timeRef.current.value);
+        };
+    
+        handleTimeChange();
+    }, [timeRef.current]);
 
     return (
         <div className="lunched-in">
-            <h1>LunchedIn</h1>
-            <div className="tools">
-                <div className="time-group">
-                    <DDSDropdown 
-                    label={{ children: "Time", visualIndicator: true }} 
-                    required 
-                    options={options} 
-                    size="sm"
-                    ref={timeRef}
-                    />
-                    <DDSButton
-                        icon="check"
-                        iconOnly
-                        className="time-btn" 
-                        onClick={handleTimeChange}
-                    />
+            <div className="title-l">
+                <DDSDropdown label={{ children: "Time", visualIndicator: true }} required options={options} ref={timeRef} size="sm" />
+                <h1>LunchedIn</h1>
+                <div className="title-icon-bg">
+                    <img src={menu} className='title-icon'/>
                 </div>
-                
-                <div className="button-group">
-                    <DDSButton
-                        iconOnly
-                        className="menu-icon-bg"
-                        onMouseOver={() => setHoveredMenu(true)}
-                        onMouseOut={() => setHoveredMenu(false)}
-                    >
-                        <img src={menu} className='menu-icon'/>
-                    </DDSButton>
-                    <p className='hover-menu' style={{opacity: hoveredMenu ? 1 : 0}}>View Today's Menu</p>
-                    <DDSButton
-                        iconOnly
-                        className="menu-icon-bg"
-                        onMouseOver={() => setHoveredItem(true)}
-                        onMouseOut={() => setHoveredItem(false)}
-                    >
-                        <img src={item} className='menu-icon'/>
-                    </DDSButton>
-                    <p className='hover-item' style={{opacity: hoveredItem ? 1 : 0}}>Order an Alternative Meal</p>
+                <div className="title-icon-bg">
+                    <img src={item} className='title-icon'/>
                 </div>     
             </div>
-
-
             <div className="user-icons-l">
                 {users.filter(user => user.lunch_time === selectedLunchTime).map(user => (
                     <div className="user-l" 
                         key={user.id}
-                        onMouseOver={() => setHoveredUserId(user.id)}
-                        onMouseOut={() => setHoveredUserId(null)}
+                        onMouseOver={() => setHoveredUserIdL(user.id)}
+                        onMouseOut={() => setHoveredUserIdL(null)}
                     >
                         <img src={user.profile_pic ? user.profile_pic : placeholder}></img>
-                        <p className='hover-user-l' style={{opacity: hoveredUserId === user.id ? 1 : 0}}>{user.name}</p>
+                        <p className='hover-user-l'>Ciao</p>
                         
                     </div>
                 ))}

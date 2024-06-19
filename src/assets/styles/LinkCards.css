@@ -1,0 +1,4 @@
+.cardsSection {
+    display: flex;
+    justify-content: space-between; /* Distributes items evenly along the main axis */
+}

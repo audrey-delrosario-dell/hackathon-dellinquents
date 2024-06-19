@@ -39,7 +39,7 @@ const LunchedIn = () => {
     return (
         <div className="lunched-in">
             <div className="title-l">
-                <DDSDropdown label={{ children: "Time", visualIndicator: true }} required options={options} ref={timeRef} size="sm"/>
+                <DDSDropdown label={{ children: "Time", visualIndicator: true }} required options={options} ref={timeRef} size="sm" />
                 <h1>LunchedIn</h1>
                 <div className="title-icon-bg">
                     <img src={menu} className='title-icon'/>

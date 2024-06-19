@@ -1,8 +1,26 @@
 div.header-container {
     background-color: #0076CE;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu-icon {
+    position: left;
 }
 
 h1.InterNex {
     text-align: center;
     color: white;
+}
+
+.right-icons {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-around;
+    /* padding: 10px; */
+}
+
+.location-icon {
+    padding-right: 50px;
 }

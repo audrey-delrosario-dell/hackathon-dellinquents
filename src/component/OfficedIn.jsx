@@ -2,7 +2,7 @@
 import React, {useRef, useEffect, useState} from 'react';
 import placeholder from '../assets/images/user-ph.png';
 import '../assets/styles/OfficedIn.css';
-import { DDSSwitch } from "@dds/react";
+import { DDSDropdown, DDSButton, DDSSwitch } from "@dds/react";
 import users from '../users-database';
 
 //to do: dropdown for days, make hover better, choose better colors
@@ -19,53 +19,53 @@ const OfficedIn = () => {
         "busy-tag": 'yellow'
     }
 
-    const [statusColors, setStatusColors] = useState({});
     const [borderColors, setBorderColors] = useState({});
-    const [visibility, setVisibility] = useState({});
     const [hoveredUserId, setHoveredUserId] = useState(null);
+    const [remote, setRemote] = useState(true);
+
+    const [options] = useState([
+        { label: "All", value: "All" },
+        { label: "Monday", value: "Monday" },
+        { label: "Tuesday", value: "Tuesday" },
+        { label: "Wednesday", value: "Wednesday" },
+        { label: "Thursday", value: "Thursday" },
+        { label: "Friday", value: "Friday" },
+        { label: "On Leave", value: "Leave" }
+      ]);
+
+    const dayRef = useRef(null);
+    const [selectedDay, setSelectedDay] = useState(null);
+
+    const handleDayChange = () => {
+        setSelectedDay(dayRef.current.value);
+        console.log(selectedDay);
+    }
+
+    useEffect(() => {  
+        console.log(dayRef.current.value); 
+    }, [dayRef]); 
+
 
     useEffect(() => { 
         const checkTags =() => {
-            let newStatusColors = {};
-            let newVisibility = {};
+            let newBorderColors = {};
             for(let user of users){
                 for(let tag of Object.keys(user.tags)){
                     if(user.tags[tag]){
-                        newStatusColors[user.id] = tagColors[tag];
-                        newVisibility[user.id] = 'visible';
+                        newBorderColors[user.id] = tagColors[tag];
                         break;
                     }
                     else{
-                        newStatusColors[user.id] = 'white'; //if no tag is true
-                        newVisibility[user.id] = 'hidden';
+                        newBorderColors[user.id] = 'white'; //if no tag is true
                     }
                 } 
 
             }
     
-            setStatusColors(newStatusColors);
-            setVisibility(newVisibility);
-        };
-    
-        checkTags();
-
-        const checkOfficeStatus =() => {
-            let newBorderColors = {};
-            const today = new Date().toLocaleString('en-us', {  weekday: 'long' });
-            for(let user of users){
-                if(user.office_status["Leave"]){
-                    newBorderColors[user.id] = 'purple';
-                } else if(user.office_status[today]){
-                    newBorderColors[user.id] = 'blue';
-                } else {
-                    newBorderColors[user.id] = 'grey';
-                }
-            }
-    
             setBorderColors(newBorderColors);
         };
     
-        checkOfficeStatus();
+        checkTags();
     
     }, [users]); // re-run effect when users change
 
@@ -73,24 +73,51 @@ const OfficedIn = () => {
 
     return (
         <div className='officed-in'>
-            <div className="title">
-                <h1>OfficedIn</h1>
+            <h1>OfficedIn</h1>
+            <div className="tools-o">
+                <div className="days-group">
+                    <DDSDropdown 
+                        label={{ children: "Day", visualIndicator: true }} 
+                        required 
+                        options={options} 
+                        size="sm"
+                        ref={dayRef}
+                    />
+                    <DDSButton
+                        icon="check"
+                        iconOnly
+                        className="day-btn" 
+                        onClick={handleDayChange}
+                    />
+                </div>
                 <DDSSwitch ref={switchRef} displayControlValues={false}/>
             </div>
+            
             <div className="user-icons">
-            {users.map(user => (
-                <div 
-                    className="user" 
-                    key={user.id} 
-                    onMouseOver={() => setHoveredUserId(user.id)}
-                    onMouseOut={() => setHoveredUserId(null)}
-                >
-                    <img src={user.profile_pic ? user.profile_pic : placeholder} style={{borderColor: borderColors[user.id] || 'white'}}></img>
-                    <p className='hover-user' style={{opacity: hoveredUserId === user.id ? 1 : 0}}>{user.name}</p>
-                    <div className="status" style={{backgroundColor: statusColors[user.id] || 'white', visibility: visibility[user.id] || 'visible'}}></div>
-                   
-                </div>
+            {!remote && users.filter(user => user.office_status[selectedDay] || selectedDay === 'All').map(user => (
+            <div 
+                className="user" 
+                key={user.id} 
+                onMouseOver={() => setHoveredUserId(user.id)}
+                onMouseOut={() => setHoveredUserId(null)}
+            >
+                <img src={user.profile_pic ? user.profile_pic : placeholder} style={{borderColor: borderColors[user.id] || 'white'}}></img>
+                <p className='hover-user' style={{opacity: hoveredUserId === user.id ? 1 : 0}}>{user.name}</p>
+            </div>
             ))}
+
+            {remote && users.filter(user => !user.office_status[selectedDay] || selectedDay === 'All').map(user => (
+            <div 
+                className="user" 
+                key={user.id} 
+                onMouseOver={() => setHoveredUserId(user.id)}
+                onMouseOut={() => setHoveredUserId(null)}
+            >
+                <img src={user.profile_pic ? user.profile_pic : placeholder} style={{borderColor: borderColors[user.id] || 'white'}}></img>
+                <p className='hover-user' style={{opacity: hoveredUserId === user.id ? 1 : 0}}>{user.name}</p>
+            </div>
+            ))}
+
 
             </div>
             <div className="bar-chart"></div>

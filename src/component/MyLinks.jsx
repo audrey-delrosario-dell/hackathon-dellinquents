@@ -1,6 +1,7 @@
 import '../assets/styles/MyLinks.css'; 
 
 import { DDSButton } from "@dds/react";
+import LinkCards from './LinkCards';
 
 const MyLinks = () => {
     return (
@@ -8,6 +9,13 @@ const MyLinks = () => {
             <h1>My Links</h1>
 
             <DDSButton className="addLink" size="md">Add New Link</DDSButton>
+            <div className='cardsSection'>
+                <p>Put cards here </p>
+                <LinkCards/>
+                <LinkCards/>
+                <p>End cards here </p>
+
+            </div>
 
         </div>
     );

@@ -1,5 +1,5 @@
 // Top Right Section 
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import LunchSelect from './LunchSelect';
 import {DDSRadioButton, DDSRadioGroup, DDSButton} from "@dds/react";
 import "../assets/styles/MyStatus.css";
@@ -15,6 +15,14 @@ const MyStatus = () => {
         console.log(radioBtnRef.current); 
     }, []);
 
+    const [showSavedBtn, setShowSavedBtn] = useState(false);
+    const handleClickSave = () => {
+        setShowSavedBtn(true);
+    }
+    const handleClickEdit = () => {
+        setShowSavedBtn(false);
+    }
+
 
 
     return (
@@ -29,7 +37,9 @@ const MyStatus = () => {
             {/* Tags Section  */}
             <TagsSection/>
 
-
+            <DDSButton kind="secondary" size="sm" onClick={handleClickEdit}>Edit Status</DDSButton>
+            {!showSavedBtn && (<DDSButton size="sm" onClick={handleClickSave}>Save Changes</DDSButton>)}
+            {showSavedBtn && (<DDSButton icon="check" iconPlacement="end" size="sm" className="savedBtn" >Saved Changes</DDSButton>)}
 
         </div>
 

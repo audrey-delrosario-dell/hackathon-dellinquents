@@ -18,11 +18,6 @@
 .time-btn{
     height: 30px;
     width: 30px;
-    border-radius: 15px;
-    text-align: center;
-    background-color: var(--blueDell);
-    color: #ffff;
-    border: none;
     transform: translateY(80%);
 }
 

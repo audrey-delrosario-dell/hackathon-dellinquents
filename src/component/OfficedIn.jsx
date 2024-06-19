@@ -5,7 +5,7 @@ import '../assets/styles/OfficedIn.css';
 import { DDSSwitch } from "@dds/react";
 import users from '../users-database';
 
-//to do: dropdown for days, graph, make pictures same dimensions, choose better colors
+//to do: dropdown for days, make hover better, choose better colors
 const OfficedIn = () => {
 
     const switchRef = useRef(null);
@@ -86,8 +86,9 @@ const OfficedIn = () => {
                     onMouseOut={() => setHoveredUserId(null)}
                 >
                     <img src={user.profile_pic ? user.profile_pic : placeholder} style={{borderColor: borderColors[user.id] || 'white'}}></img>
-                    <div className="status" style={{backgroundColor: statusColors[user.id] || 'white', visibility: visibility[user.id] || 'visible'}}></div>
                     <p className='hover-user' style={{opacity: hoveredUserId === user.id ? 1 : 0}}>{user.name}</p>
+                    <div className="status" style={{backgroundColor: statusColors[user.id] || 'white', visibility: visibility[user.id] || 'visible'}}></div>
+                   
                 </div>
             ))}
 

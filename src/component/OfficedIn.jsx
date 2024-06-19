@@ -5,7 +5,7 @@ import '../assets/styles/OfficedIn.css';
 import { DDSDropdown, DDSButton, DDSSwitch } from "@dds/react";
 import users from '../users-database';
 
-//to do: dropdown for days, make hover better, choose better colors
+//to do: make hover better, choose better colors
 const OfficedIn = () => {
 
     const switchRef = useRef(null);
@@ -70,6 +70,10 @@ const OfficedIn = () => {
     }, [users]); // re-run effect when users change
 
 
+    const handleRemoteChange = () =>{
+        console.log(remote);
+       setRemote(!remote);
+    }
 
     return (
         <div className='officed-in'>
@@ -90,35 +94,35 @@ const OfficedIn = () => {
                         onClick={handleDayChange}
                     />
                 </div>
-                <DDSSwitch ref={switchRef} displayControlValues={false}/>
+                <DDSSwitch ref={switchRef} displayControlValues={false} onChange={handleRemoteChange}/>
             </div>
             
             <div className="user-icons">
-            {!remote && users.filter(user => user.office_status[selectedDay] || selectedDay === 'All').map(user => (
-            <div 
-                className="user" 
-                key={user.id} 
-                onMouseOver={() => setHoveredUserId(user.id)}
-                onMouseOut={() => setHoveredUserId(null)}
-            >
-                <img src={user.profile_pic ? user.profile_pic : placeholder} style={{borderColor: borderColors[user.id] || 'white'}}></img>
-                <p className='hover-user' style={{opacity: hoveredUserId === user.id ? 1 : 0}}>{user.name}</p>
-            </div>
+            {!remote && users.filter(user => (user.office_status[selectedDay]) || selectedDay === 'All').map(user => (
+                <div 
+                    className="user" 
+                    key={user.id} 
+                    onMouseOver={() => setHoveredUserId(user.id)}
+                    onMouseOut={() => setHoveredUserId(null)}
+                >
+                    <img src={user.profile_pic ? user.profile_pic : placeholder} style={{borderColor: borderColors[user.id] || 'white'}}></img>
+                    <p className='hover-user' style={{opacity: hoveredUserId === user.id ? 1 : 0}}>{user.name}</p>
+                </div>
             ))}
 
-            {remote && users.filter(user => !user.office_status[selectedDay] || selectedDay === 'All').map(user => (
-            <div 
-                className="user" 
-                key={user.id} 
-                onMouseOver={() => setHoveredUserId(user.id)}
-                onMouseOut={() => setHoveredUserId(null)}
-            >
-                <img src={user.profile_pic ? user.profile_pic : placeholder} style={{borderColor: borderColors[user.id] || 'white'}}></img>
-                <p className='hover-user' style={{opacity: hoveredUserId === user.id ? 1 : 0}}>{user.name}</p>
-            </div>
+            {remote && users.filter(user => ((!user.office_status[selectedDay] && selectedDay !== 'Leave') || selectedDay === 'All')).map(user => (
+                <div 
+                    className="user" 
+                    key={user.id} 
+                    onMouseOver={() => setHoveredUserId(user.id)}
+                    onMouseOut={() => setHoveredUserId(null)}
+                >
+                    <img src={user.profile_pic ? user.profile_pic : placeholder} style={{borderColor: borderColors[user.id] || 'white'}}></img>
+                    <p className='hover-user' style={{opacity: hoveredUserId === user.id ? 1 : 0}}>{user.name}</p>
+                </div>
             ))}
 
-
+            
             </div>
             <div className="bar-chart"></div>
         </div>

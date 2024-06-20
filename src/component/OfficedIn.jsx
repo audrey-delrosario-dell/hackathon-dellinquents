@@ -16,7 +16,7 @@ const OfficedIn = () => {
         "game-tag": '#c0dd78',
         "working-tag": '#97dcf4',
         "busy-tag": '#fe6873'
-    }
+    } //add out of office?
 
     const [borderColors, setBorderColors] = useState({});
     const [hoveredUserId, setHoveredUserId] = useState(null);
@@ -92,10 +92,35 @@ const OfficedIn = () => {
                         className="day-btn" 
                         onClick={handleDayChange}
                     />
-                </div>
+                </div>  
                 <DDSSwitch ref={switchRef} displayControlValues={false} onChange={handleRemoteChange}/>
             </div>
-            
+            <div className="legend">
+                <div className="tag-info">
+                    <p className="color" style={{backgroundColor: tagColors['chat-tag']}}></p>
+                    <p className='label'>Free for a chat</p>
+               </div>
+               <div className="tag-info">
+                    <p className="color" style={{backgroundColor: tagColors['coffee-tag']}}></p>
+                    <p className='label'>Coffee break</p>
+               </div>
+               <div className="tag-info">
+                    <p className="color" style={{backgroundColor: tagColors['snack-tag']}}></p>
+                    <p className='label'>Snack Time</p>
+               </div>
+               <div className="tag-info">
+                    <p className="color" style={{backgroundColor: tagColors['game-tag']}}></p>
+                    <p className='label'>Let's play a game?</p>
+               </div>
+               <div className="tag-info">
+                    <p className="color" style={{backgroundColor: tagColors['working-tag']}}></p>
+                    <p className='label'>Looking for a working buddy</p>
+               </div>
+               <div className="tag-info">
+                    <p className="color" style={{backgroundColor: tagColors['busy-tag']}}></p>
+                    <p className='label'>Busy</p>
+               </div>
+            </div>
             <div className="user-icons">
             {!remote && users.filter(user => user.office_status[selectedDay] || selectedDay === 'All').map(user => (
                 <div 

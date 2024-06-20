@@ -2,4 +2,7 @@ h1 {
     text-align: center;
 }
 
-
+.my-links {
+    max-height: 500px;
+    overflow-y: auto;
+}

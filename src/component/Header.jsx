@@ -24,12 +24,6 @@ const Header = () => {
                     <UserIcon/>
                 </div>  
             </div>
-                {isClicked && (
-                    <select>
-                        <option value="Location1">Location 1</option>
-                        <option value="Location2">Location 2</option>
-                    </select>
-                )}
         </div>
         
     );

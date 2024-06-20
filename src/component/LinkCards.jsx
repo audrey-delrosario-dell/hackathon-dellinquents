@@ -2,17 +2,18 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import '../assets/styles/LinkCards.css'; 
 
-const LinkCards = () => {
+const LinkCards = ({title, text, url}) => {
+  const handleBtnClick = () => {
+    window.open(url, '_blank');
+  }
     return (
-        <Card className='card'>
-        <Card.Img variant="top" src="holder.js/100px180" />
+        <Card className='link-card-purr'>
         <Card.Body>
-          <Card.Title>Card Title</Card.Title>
+          <Card.Title>{title}</Card.Title>
           <Card.Text>
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
+            {text}
           </Card.Text>
-          <Button variant="primary">Click to open link</Button>
+          <Button variant="primary" onClick={handleBtnClick}>Click to open link</Button>
         </Card.Body>
       </Card>
     );

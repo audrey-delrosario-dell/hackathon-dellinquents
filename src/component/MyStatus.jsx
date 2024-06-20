@@ -24,7 +24,6 @@ const MyStatus = () => {
     }
 
 
-
     return (
         <div className='my-status'>
             <h1>My Status</h1>

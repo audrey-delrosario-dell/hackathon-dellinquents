@@ -98,15 +98,15 @@ const OfficedIn = () => {
             <div className="legend">
                 <div className="tag-info">
                     <p className="color" style={{backgroundColor: tagColors['chat-tag']}}></p>
-                    <p className='label'>Free for a chat</p>
+                    <p className='label'>Let's chat!</p>
                </div>
                <div className="tag-info">
                     <p className="color" style={{backgroundColor: tagColors['coffee-tag']}}></p>
-                    <p className='label'>Coffee break</p>
+                    <p className='label'>Up for coffee</p>
                </div>
                <div className="tag-info">
                     <p className="color" style={{backgroundColor: tagColors['snack-tag']}}></p>
-                    <p className='label'>Snack Time</p>
+                    <p className='label'>Let's grab a snack</p>
                </div>
                <div className="tag-info">
                     <p className="color" style={{backgroundColor: tagColors['game-tag']}}></p>
@@ -114,7 +114,7 @@ const OfficedIn = () => {
                </div>
                <div className="tag-info">
                     <p className="color" style={{backgroundColor: tagColors['working-tag']}}></p>
-                    <p className='label'>Looking for a working buddy</p>
+                    <p className='label'>Let's be work buddies</p>
                </div>
                <div className="tag-info">
                     <p className="color" style={{backgroundColor: tagColors['busy-tag']}}></p>

@@ -11,8 +11,8 @@ const OfficedIn = () => {
     
     const tagColors ={
         "chat-tag": '#f69ac6',
-        "coffee-tag": '#e6ac28',
-        "snack-tag": '#0468a1', 
+        "coffee-tag": '#e6ac28', //orange
+        "snack-tag": '#0468a1', // light 
         "game-tag": '#c0dd78',
         "working-tag": '#97dcf4',
         "busy-tag": '#fe6873'

@@ -36,10 +36,12 @@ const MyStatus = () => {
 
             {/* Tags Section  */}
             <TagsSection/>
-
-            <DDSButton kind="secondary" size="sm" onClick={handleClickEdit}>Edit Status</DDSButton>
-            {!showSavedBtn && (<DDSButton size="sm" onClick={handleClickSave}>Save Changes</DDSButton>)}
-            {showSavedBtn && (<DDSButton icon="check" iconPlacement="end" size="sm" className="savedBtn" >Changes Saved</DDSButton>)}
+            <div className='save-btns'>
+                <DDSButton kind="secondary" size="sm" onClick={handleClickEdit}>Edit Status</DDSButton>
+                {!showSavedBtn && (<DDSButton size="sm" onClick={handleClickSave}>Save Changes</DDSButton>)}
+                {showSavedBtn && (<DDSButton icon="check" iconPlacement="end" size="sm" className="savedBtn" >Changes Saved</DDSButton>)}
+            </div>
+            
 
         </div>
 

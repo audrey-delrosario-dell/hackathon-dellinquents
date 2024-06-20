@@ -1,4 +1,10 @@
 .cardsSection {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between; /* Distributes items evenly along the main axis */
+}
+
+.card {
+    width: 16rem;
+    margin: 10px;
 }

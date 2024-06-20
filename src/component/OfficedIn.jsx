@@ -20,7 +20,7 @@ const OfficedIn = () => {
 
     const [borderColors, setBorderColors] = useState({});
     const [hoveredUserId, setHoveredUserId] = useState(null);
-    const [remote, setRemote] = useState(true);
+    const [remote, setRemote] = useState(false);
 
     const [options] = useState([
         { label: "All", value: "All" },
@@ -74,6 +74,9 @@ const OfficedIn = () => {
        setRemote(!remote);
     }
 
+    const visibilityOffice = { visibility: remote ? 'hidden' : 'visible' };
+    const visibilityRemote = { visibility: remote ? 'visible' : 'hidden' };
+
     return (
         <div className='officed-in'>
             <h1>OfficedIn</h1>
@@ -93,7 +96,12 @@ const OfficedIn = () => {
                         onClick={handleDayChange}
                     />
                 </div>  
-                <DDSSwitch ref={switchRef} displayControlValues={false} onChange={handleRemoteChange}/>
+                <div className="remote-toggle">
+                    <p className='remote-label' style={visibilityOffice}>In Office</p>
+                    <DDSSwitch ref={switchRef} displayControlValues={false} onChange={handleRemoteChange}/>
+                    <p className='remote-label' style={visibilityRemote}>Remote</p>
+                </div>
+                
             </div>
             <div className="legend">
                 <div className="tag-info">

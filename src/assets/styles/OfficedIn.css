@@ -76,3 +76,17 @@
     padding: 16px;
     flex-wrap: wrap; 
 }
+
+.remote-label{
+    font-size: 13px;
+    transition: opacity 0.3s ease-in-out;
+    transform: translateY(20%);
+}
+
+.remote-toggle{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap; 
+    transform: translateY(30%);
+}

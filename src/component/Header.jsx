@@ -1,9 +1,10 @@
 
 import { useState } from 'react';
 import LocationIcon from '../assets/icons/LocationIcon';
-import MenuIcon from '../assets/icons/MenuIcon';
 import '../assets/styles/Header.css'; 
 import UserIcon from './../assets/icons/UserIcon';
+import logo from './../assets/images/Dell_Technologies_logo.png';
+import UserMenu from './UserMenu';
 
 
 const Header = () => {
@@ -17,7 +18,10 @@ const Header = () => {
     return (
         <div>
             <div className="header-container">
-                <MenuIcon/>
+                <div className="group">
+                    <UserMenu/>
+                    <img src={logo} className='logo'/>
+                </div>
                 <h1 className='InterNex'>Intern Nexus</h1>
                 <div className='right-icons'>
                     <LocationIcon onClick={handleClick}/>

@@ -35,7 +35,7 @@ import CoffeeCircle from "../assets/images/coffee_circle.svg";
 import GameCircle from "../assets/images/game_circle.svg";
 import SnackCircle from "../assets/images/snack_circle.svg";
 import WorkTogether from "../assets/images/work_together_circle.svg";
-
+import MenuIcon from '../assets/icons/MenuIcon';
 
 function Tag({ src }) {
   const [open, setOpen] = useState(false);
@@ -147,9 +147,7 @@ function Example() {
 
   return (
     <>
-      <Button variant="primary" onClick={handleShow}>
-        Users
-      </Button>
+      <div onClick={handleShow} className="toggle-menu"> <MenuIcon/> </div>
       <Offcanvas
         show={show}
         onHide={handleClose}

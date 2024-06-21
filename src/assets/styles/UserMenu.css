@@ -31,3 +31,8 @@
 .search-bar {
   border-radius: 0%;
 }
+
+.toggle-menu{
+  cursor: pointer;
+}
+

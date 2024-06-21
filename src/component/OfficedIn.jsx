@@ -138,7 +138,7 @@ const OfficedIn = () => {
                     onMouseOut={() => setHoveredUserId(null)}
                 >
                     <img src={user.profile_pic ? user.profile_pic : placeholder} style={{borderColor: borderColors[user.id] || 'white'}}></img>
-                    <p className='hover-user' style={{opacity: hoveredUserId === user.id ? 1 : 0}}>{user.name}</p>
+                    <div className='hover-user' style={{opacity: hoveredUserId === user.id ? 1 : 0}}>{user.name}</div>
                 </div>
             ))}
 
@@ -150,7 +150,7 @@ const OfficedIn = () => {
                     onMouseOut={() => setHoveredUserId(null)}
                 >
                     <img src={user.profile_pic ? user.profile_pic : placeholder} style={{borderColor: borderColors[user.id] || 'white'}}></img>
-                    <p className='hover-user' style={{opacity: hoveredUserId === user.id ? 1 : 0}}>{user.name}</p>
+                    <div className='hover-user' style={{opacity: hoveredUserId === user.id ? 1 : 0}}>{user.name}</div>
                 </div>
             ))}
             </div>

@@ -84,12 +84,15 @@
 }
 
 .hover-user-l {
-    padding: 5px;
+    padding: 2px;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
     z-index: 1;
     font-size: 12px;
     text-align: center;
+    height: 15px;
+    width: 120px;
+    margin-bottom: 15px;
 }
 
 /* Add a media query for small screens */

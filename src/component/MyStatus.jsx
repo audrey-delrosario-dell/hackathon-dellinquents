@@ -28,7 +28,7 @@ const MyStatus = () => {
         <div className='my-status'>
             <h1>My Status</h1>
             {/* Lunch status section  */}
-            <LunchStatus/>
+            <LunchStatus/>  
 
             {/* Office Section  */}
             <OfficeStatus/>

@@ -79,7 +79,7 @@ const OfficedIn = () => {
 
     return (
         <div className='officed-in'>
-            <h1>OfficedIn</h1>
+            <h2>OfficedIn</h2>
             <div className="tools-o">
                 <div className="days-group">
                     <DDSDropdown 

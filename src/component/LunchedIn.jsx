@@ -33,7 +33,7 @@ const LunchedIn = () => {
     }, [timeRef]); 
     return (
         <div className="lunched-in">
-            <h1>LunchedIn</h1>
+            <h2>LunchedIn</h2>
             <div className="tools">
                 <div className="time-group">
                     <DDSDropdown 

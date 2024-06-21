@@ -36,7 +36,7 @@ const MyStatus = () => {
 
     return (
         <div className='my-status'>
-            <h1>My Status</h1>
+            <h2>My Status</h2>
             {/* Lunch status section  */}
             <LunchStatus isEditMode={!showSavedBtn}/>
 

@@ -34,7 +34,7 @@ const MyLinks = ({isEditMode}) => {
 
     return (
         <div className='my-links'>
-           <h1>My Resources</h1>
+           <h2>My Resources</h2>
             <button className='btn-add-link' onClick={addNewLink}>Add New Link</button>
             <div className='cardsSection'>
                 {links.map((link, index) => (

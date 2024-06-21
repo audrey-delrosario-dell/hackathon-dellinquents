@@ -1,4 +1,5 @@
 div.header-container {
+    height: 4rem;
     background-color: #0076CE;
     display: flex;
     align-items: center;

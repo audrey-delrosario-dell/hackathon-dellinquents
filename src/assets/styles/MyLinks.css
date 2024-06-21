@@ -6,8 +6,10 @@ h1 {
 
 
 .my-links {
-    max-height: 500px;
+    max-height: 25rem;
     overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(98, 98, 98, 0.486) transparent;
 }
 
 .btn-add-link {

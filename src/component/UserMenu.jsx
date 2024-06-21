@@ -125,7 +125,7 @@ function Example() {
       if (i === index) {
         return {
           ...employee,
-          starColor: employee.starColor === "grey" ? "yellow" : "grey",
+          starColor: employee.starColor === "grey" ? "#e6ac28" : "grey",
         };
       }
       return employee;
@@ -139,7 +139,7 @@ function Example() {
     setFilterOn(!isFilterOn);
   
     if (!isFilterOn) {
-      setFilteredEmployees(employees.filter(employee => employee.starColor === "yellow"));
+      setFilteredEmployees(employees.filter(employee => employee.starColor === "#e6ac28"));
     } else {
       setFilteredEmployees(employees);
     }

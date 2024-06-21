@@ -6,7 +6,7 @@ h1 {
 
 
 .my-links {
-    max-height: 25rem;
+    max-height: 35em;
     overflow-y: auto;
     scrollbar-width: thin;
     scrollbar-color: rgba(98, 98, 98, 0.486) transparent;

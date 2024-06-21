@@ -4,7 +4,7 @@ import { DDSDropdown } from "@dds/react";
 import { InputLabel, MenuItem, Select } from "@mui/material";
 
 const LunchStatus = ({ isEditMode }) => {
-    const [selectedTime, setSelectedTime] = useState('');  // Add a new state for selected time
+    const [selectedTime, setSelectedTime] = useState('11:00');  // Add a new state for selected time
 
     const handleSelectTime = (e) => {
         const selectedValue = e.target.value;

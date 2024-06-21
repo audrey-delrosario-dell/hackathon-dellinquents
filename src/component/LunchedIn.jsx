@@ -81,7 +81,7 @@ const LunchedIn = () => {
                         onMouseOut={() => setHoveredUserId(null)}
                     >
                         <img src={user.profile_pic ? user.profile_pic : placeholder}></img>
-                        <p className='hover-user-l' style={{opacity: hoveredUserId === user.id ? 1 : 0}}>{user.name}</p>
+                        <div className='hover-user-l' style={{opacity: hoveredUserId === user.id ? 1 : 0}}>{user.name}</div>
                         
                     </div>
                 ))}

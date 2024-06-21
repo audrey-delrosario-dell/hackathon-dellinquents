@@ -3,3 +3,7 @@
     flex-wrap: wrap; /* makes it responsive */
     justify-content: space-between;
 }
+
+.selected-tag p{
+    font-weight: bold;
+}

@@ -1,6 +1,12 @@
+import { useState } from "react";
 import TagRadioBtnGroup from "./TagRadioBtnGroup";
 
-const TagsSection = () => {
+const TagsSection = ({isEditMode}) => {
+    const [selectedTag, setSelectedTag] = useState("");
+    const handleTagChange = (tag) => {
+        setSelectedTag(tag);
+    };
+
     return (
         <div>
             <div className="dds__row">
@@ -13,8 +19,11 @@ const TagsSection = () => {
                 </div>
                 <div className="dds__col--1 dds__col--sm-3 dds__col--md-6 dds__mb-3">
                     <div className="dds-sb__sample-box">
-                        <p>Up for...</p>
-                        <TagRadioBtnGroup/>
+                        {isEditMode? (<p>Up for... <TagRadioBtnGroup 
+                            isEditMode={isEditMode}
+                            selectedTag={selectedTag}
+                            handleTagChange={handleTagChange}/></p>) : (<p>Up for a {selectedTag}</p>)}
+                        
                     </div>
                 </div>
             </div>            

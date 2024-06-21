@@ -1,8 +1,22 @@
+
 h1 {
     text-align: center;
+    padding-bottom: 2rem;
 }
+
 
 .my-links {
     max-height: 500px;
     overflow-y: auto;
+}
+
+.btn-add-link {
+    background-color: var(--blueDell);
+    text-align: center;
+    color: white;
+    border: 0;
+    height: 2.2rem;
+    border-radius: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
 }

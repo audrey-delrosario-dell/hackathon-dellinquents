@@ -7,13 +7,14 @@ const LinkCards = ({title, text, url}) => {
     window.open(url, '_blank');
   }
     return (
-        <Card className='link-card-purr' style={{ height: '8rem' }}>
+
+        <Card className='link-card-purr' style={{ height: '10rem' }}>
         <Card.Body>
           <Card.Title>{title}</Card.Title>
-          <Card.Text>
+          <Card.Text className='text-container'>
             {text}
           </Card.Text>
-          <Button variant="primary" onClick={handleBtnClick}>Click to open link</Button>
+            <button className='btn-add-link' onClick={handleBtnClick}>Click to Open Link</button>
         </Card.Body>
       </Card>
     );

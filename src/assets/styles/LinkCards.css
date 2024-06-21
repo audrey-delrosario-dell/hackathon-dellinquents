@@ -7,8 +7,12 @@
 
 .link-card-purr {
     width: 12rem;
-    margin: 10px;
-    overflow: hidden; 
-    white-space: nowrap;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.text-container {
+    height: 3em;
+    overflow: hidden;
+
 }

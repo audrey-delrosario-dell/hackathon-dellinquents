@@ -7,7 +7,7 @@ const LinkCards = ({title, text, url}) => {
     window.open(url, '_blank');
   }
     return (
-        <Card className='link-card-purr'>
+        <Card className='link-card-purr' style={{ height: '8rem' }}>
         <Card.Body>
           <Card.Title>{title}</Card.Title>
           <Card.Text>

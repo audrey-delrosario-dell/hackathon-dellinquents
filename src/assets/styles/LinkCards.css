@@ -6,11 +6,9 @@
 }
 
 .link-card-purr {
-    height: 500px; 
-    width: 15rem;
+    width: 12rem;
     margin: 10px;
     overflow: hidden; 
-    text-overflow: ellipsis;
     white-space: nowrap;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }

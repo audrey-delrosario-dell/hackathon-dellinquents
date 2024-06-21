@@ -32,7 +32,7 @@ const MyLinks = () => {
 
     return (
         <div className='my-links'>
-            <h1>My Links</h1>
+            <h1>My Resources</h1>
             <DDSButton className="addLink" size="md" onClick={addNewLink} >Add New Link</DDSButton>
             <div className='cardsSection'>
                 {links.map((link, index) => (

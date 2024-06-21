@@ -1,6 +1,5 @@
 // Top Right Section 
 import React, { useEffect, useRef, useState } from 'react';
-import LunchSelect from './LunchSelect';
 import {DDSRadioButton, DDSRadioGroup, DDSButton} from "@dds/react";
 import "../assets/styles/MyStatus.css";
 import LunchStatus from './LunchStatus';
@@ -23,20 +22,31 @@ const MyStatus = () => {
         setShowSavedBtn(false);
     }
 
+    const toggleEditMode = () => {
+        setEditMode(!editMode);
+    };
+
+    const handleStatusChange = (day, newStatus) => {
+        setStatus((prevStatus) => ({
+            ...prevStatus,
+            [day]: newStatus,
+        }));
+    };  
+
 
     return (
         <div className='my-status'>
             <h1>My Status</h1>
             {/* Lunch status section  */}
-            <LunchStatus/>
+            <LunchStatus isEditMode={!showSavedBtn}/>
 
             {/* Office Section  */}
-            <OfficeStatus/>
+            <OfficeStatus isEditMode={!showSavedBtn}/>
 
             {/* Tags Section  */}
-            <TagsSection/>
+            <TagsSection isEditMode={!showSavedBtn}/>
             <div className='save-btns'>
-                <DDSButton kind="secondary" size="sm" onClick={handleClickEdit}>Edit Status</DDSButton>
+                <DDSButton kind="secondary" size="sm" onClick={handleClickEdit} className="edit-stat-btn">Edit Status</DDSButton>
                 {!showSavedBtn && (<DDSButton size="sm" onClick={handleClickSave}>Save Changes</DDSButton>)}
                 {showSavedBtn && (<DDSButton icon="check" iconPlacement="end" size="sm" className="savedBtn" >Changes Saved</DDSButton>)}
             </div>

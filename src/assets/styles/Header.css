@@ -1,13 +1,16 @@
-h1.InterNex {
-    text-align: center;
-    color: white;
-}
-
 div.header-container {
     background-color: #0076CE;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 1%;
+}
+
+h1.InterNex {
+    text-align: center;
+    color: white;
+    margin-top: 1rem;
+    margin-bottom: 0px;
 }
 
 

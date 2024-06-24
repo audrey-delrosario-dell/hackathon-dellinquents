@@ -44,7 +44,9 @@
 }
 
 .user-l {
+    position: relative;
     text-align: center;    
+    margin-top: 15px;
 }
 
 .user-l img {
@@ -53,6 +55,23 @@
     width: 75px;
     height: auto;
     border-radius: 50%;
+}
+
+.hover-user-l{
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 1;
+    font-size: 12px;
+    height: 15px;
+    width: 120px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 200%);
+    text-align: center;
+}
+.blank{
+    margin-bottom: 30px;
 }
 
 .hover-menu {
@@ -83,17 +102,6 @@
     text-align: center;
 }
 
-.hover-user-l {
-    padding: 2px;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-    z-index: 1;
-    font-size: 12px;
-    text-align: center;
-    height: 15px;
-    width: 120px;
-    margin-bottom: 15px;
-}
 
 /* Add a media query for small screens */
 @media (max-width: 1000px) {

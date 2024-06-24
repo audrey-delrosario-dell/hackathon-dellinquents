@@ -82,7 +82,7 @@ const LunchedIn = () => {
                     >
                         <img src={user.profile_pic ? user.profile_pic : placeholder}></img>
                         <div className='hover-user-l' style={{opacity: hoveredUserId === user.id ? 1 : 0}}>{user.name}</div>
-                        
+                        <div className="blank"></div>
                     </div>
                 ))}
             </div>

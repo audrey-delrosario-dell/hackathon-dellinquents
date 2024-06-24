@@ -18,8 +18,7 @@ const users = [
             "Tuesday": false,
             "Wednesday": true,
             "Thursday": true,
-            "Friday": false,
-            "Leave": false
+            "Friday": false
         },
         "tags": {
             "chat-tag": true,
@@ -41,8 +40,7 @@ const users = [
             "Tuesday": true,
             "Wednesday": true,
             "Thursday": false,
-            "Friday": false,
-            "Leave": false
+            "Friday": false
         },
         "tags": {
             "chat-tag": false,
@@ -65,8 +63,7 @@ const users = [
             "Tuesday": true,
             "Wednesday": true,
             "Thursday": true,
-            "Friday": false,
-            "Leave": false
+            "Friday": false
         },
         "tags": {
             "chat-tag": false,
@@ -89,8 +86,7 @@ const users = [
             "Tuesday": true,
             "Wednesday": true,
             "Thursday": true,
-            "Friday": false,
-            "Leave": false
+            "Friday": false
         },
         "tags": {
             "chat-tag": false,
@@ -113,8 +109,7 @@ const users = [
             "Tuesday": false,
             "Wednesday": false,
             "Thursday": false,
-            "Friday": false,
-            "Leave": true
+            "Friday": false
         },
         "tags": {
             "chat-tag": false,
@@ -137,8 +132,7 @@ const users = [
             "Tuesday": true,
             "Wednesday": false,
             "Thursday": false,
-            "Friday": true,
-            "Leave": false
+            "Friday": true
         },
         "tags": {
             "chat-tag": false,
@@ -161,8 +155,7 @@ const users = [
             "Tuesday": true,
             "Wednesday": true,
             "Thursday": false,
-            "Friday": false,
-            "Leave": false
+            "Friday": false
         },
         "tags": {
             "chat-tag": false,
@@ -184,8 +177,7 @@ const users = [
             "Tuesday": false,
             "Wednesday": true,
             "Thursday": true,
-            "Friday": true,
-            "Leave": false
+            "Friday": true
         },
         "tags": {
             "chat-tag": false,
@@ -207,8 +199,7 @@ const users = [
             "Tuesday": true,
             "Wednesday": true,
             "Thursday": true,
-            "Friday": true,
-            "Leave": false
+            "Friday": true
         },
         "tags": {
             "chat-tag": false,
@@ -230,8 +221,7 @@ const users = [
             "Tuesday": false,
             "Wednesday": true,
             "Thursday": false,
-            "Friday": true,
-            "Leave": false
+            "Friday": true
         },
         "tags": {
             "chat-tag": false,

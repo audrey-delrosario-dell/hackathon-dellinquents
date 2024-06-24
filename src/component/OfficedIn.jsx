@@ -28,8 +28,7 @@ const OfficedIn = () => {
         { label: "Tuesday", value: "Tuesday" },
         { label: "Wednesday", value: "Wednesday" },
         { label: "Thursday", value: "Thursday" },
-        { label: "Friday", value: "Friday" },
-        { label: "On Leave", value: "Leave" }
+        { label: "Friday", value: "Friday" }
       ]);
 
     const dayRef = useRef(null);
@@ -130,29 +129,31 @@ const OfficedIn = () => {
                </div>
             </div>
             <div className="user-icons">
-            {!remote && users.filter(user => user.office_status[selectedDay] || selectedDay === 'All').map(user => (
-                <div 
-                    className="user" 
-                    key={user.id} 
-                    onMouseOver={() => setHoveredUserId(user.id)}
-                    onMouseOut={() => setHoveredUserId(null)}
-                >
-                    <img src={user.profile_pic ? user.profile_pic : placeholder} style={{borderColor: borderColors[user.id] || 'white'}}></img>
-                    <div className='hover-user' style={{opacity: hoveredUserId === user.id ? 1 : 0}}>{user.name}</div>
-                </div>
-            ))}
+                {!remote && users.filter(user => user.office_status[selectedDay] || selectedDay === 'All').map(user => (
+                    <div 
+                        className="user" 
+                        key={user.id} 
+                        onMouseOver={() => setHoveredUserId(user.id)}
+                        onMouseOut={() => setHoveredUserId(null)}
+                    >
+                        <img src={user.profile_pic ? user.profile_pic : placeholder} style={{borderColor: borderColors[user.id] || 'white'}}></img>
+                        <div className='hover-user' style={{opacity: hoveredUserId === user.id ? 1 : 0}}>{user.name}</div>
+                        <div className="blank"></div>
+                    </div>
+                ))}
 
-            {remote && users.filter(user => (!user.office_status[selectedDay] && !user.office_status['Leave']) || selectedDay === 'All').map(user => (
-                <div 
-                    className="user" 
-                    key={user.id} 
-                    onMouseOver={() => setHoveredUserId(user.id)}
-                    onMouseOut={() => setHoveredUserId(null)}
-                >
-                    <img src={user.profile_pic ? user.profile_pic : placeholder} style={{borderColor: borderColors[user.id] || 'white'}}></img>
-                    <div className='hover-user' style={{opacity: hoveredUserId === user.id ? 1 : 0}}>{user.name}</div>
-                </div>
-            ))}
+                {remote && users.filter(user => (!user.office_status[selectedDay]) || selectedDay === 'All').map(user => (
+                    <div 
+                        className="user" 
+                        key={user.id} 
+                        onMouseOver={() => setHoveredUserId(user.id)}
+                        onMouseOut={() => setHoveredUserId(null)}
+                    >
+                        <img src={user.profile_pic ? user.profile_pic : placeholder} style={{borderColor: borderColors[user.id] || 'white'}}></img>
+                        <div className='hover-user' style={{opacity: hoveredUserId === user.id ? 1 : 0}}>{user.name}</div>
+                        <div className="blank"></div>
+                    </div>
+                ))}
             </div>
         </div>
     );

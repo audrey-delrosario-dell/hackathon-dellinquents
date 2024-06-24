@@ -11,7 +11,7 @@ const Quadrant = () => {
             <div className="dds__row">
                 <div className="dds__col--1 dds__col--sm-3 dds__col--md-6 dds__mb-3">
                     <div className="section">
-                        <LunchedIn/>
+                    <OfficedIn/>
                     </div>
                 </div>
                 <div className="dds__col--1 dds__col--sm-3 dds__col--md-6 dds__mb-3">
@@ -23,7 +23,7 @@ const Quadrant = () => {
             <div className="dds__row">
                 <div className="dds__col--1 dds__col--sm-3 dds__col--md-6 dds__mb-3">
                     <div className="section">
-                        <OfficedIn/>
+                        <LunchedIn/>
                     </div>
                 </div>
                 <div className="dds__col--1 dds__col--sm-3 dds__col--md-6 dds__mb-3">

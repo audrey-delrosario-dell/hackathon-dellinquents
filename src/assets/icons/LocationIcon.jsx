@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./LocationIcon.css";
-import Pin from "../images/location-pin.svg";
+import Pin from "../images/pin.svg";
 
 const LocationIcon = () => {
     const [isHovered, setIsHovered] = useState(false);

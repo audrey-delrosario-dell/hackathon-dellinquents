@@ -16,7 +16,7 @@ const OfficedIn = () => {
         "game-tag": '#c0dd78',
         "working-tag": '#97dcf4',
         "busy-tag": '#fe6873'
-    } //add out of office?
+    } 
 
     const [borderColors, setBorderColors] = useState({});
     const [hoveredUserId, setHoveredUserId] = useState(null);

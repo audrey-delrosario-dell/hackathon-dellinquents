@@ -4,20 +4,30 @@ import Button from 'react-bootstrap/Button';
 import "../assets/styles/OfficeStatus.css";
 import Table from 'react-bootstrap/Table';
 
+    
+
 const OfficeStatus = ({ isEditMode }) => {
+
     // Example initial status (you can replace this with your actual data)
     const [officeStatus, setOfficeStatus] = useState({
-        Monday: 'Remote',
-        Tuesday: 'In Office',
-        Wednesday: 'Remote',
-        Thursday: 'In Office',
-        Friday: 'Remote',
+        Monday: { status: 'Remote' },
+        Tuesday: { status: 'In Office', startTime: '09:00', endTime: '17:00' },
+        Wednesday: { status: 'Remote' },
+        Thursday: { status: 'In Office', startTime: '09:00', endTime: '17:00' },
+        Friday: { status: 'Remote' },
     });
 
-    const handleUpdateOfficeStatus = (day, newStatus) => {
+    const [startTime, setStartTime] = useState('09:00');
+    const [endTime, setEndTime] = useState('17:30');
+
+    const handleUpdateOfficeStatus = (day, newStatus, newStartTime, newEndTime) => {
         setOfficeStatus((prevStatus) => ({
             ...prevStatus,
-            [day]: newStatus,
+            [day]: {
+                status: newStatus,
+                startTime: newStatus === 'In Office' ? newStartTime : undefined,
+                endTime: newStatus === 'In Office' ? newEndTime : undefined,
+            },
         }));
     };
 
@@ -40,25 +50,70 @@ const OfficeStatus = ({ isEditMode }) => {
                                     <th>Status</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                {Object.keys(officeStatus).map((day) => (
-                                    <tr key={day}>
-                                        <td style={{ width: '8rem'}}>{day}</td>
-                                        <td>
-                                            {isEditMode ? (
-                                                <select
-                                                    value={officeStatus[day]}
-                                                    onChange={(e) => handleUpdateOfficeStatus(day, e.target.value)}>
-                                                    <option value="Remote">Remote</option>
-                                                    <option value="In Office">In Office</option>
-                                                </select>
-                                            ) : (
-                                                officeStatus[day]
-                                            )}
-                                        </td>
-                                    </tr>
-                                ))}
-                            </tbody>
+                                <tbody>
+                                    {Object.keys(officeStatus).map((day) => (
+                                        <tr key={day}>
+                                            <td style={{ width: '8rem' }}>{day}</td>
+                                            <td>
+                                                {isEditMode ? (
+                                                    <div>
+                                                        <select
+                                                            value={officeStatus[day].status}
+                                                            onChange={(e) =>
+                                                                handleUpdateOfficeStatus(
+                                                                    day,
+                                                                    e.target.value,
+                                                                    officeStatus[day].startTime,
+                                                                    officeStatus[day].endTime
+                                                                )
+                                                            }
+                                                        >
+                                                            <option value="Remote">Remote</option>
+                                                            <option value="In Office">In Office</option>
+                                                        </select>
+                                                        {officeStatus[day].status === 'In Office' && (
+                                                            <div>
+                                                                <label>Start Time:</label>
+                                                                <input
+                                                                    type="time"
+                                                                    value={officeStatus[day].startTime}
+                                                                    onChange={(e) =>
+                                                                        handleUpdateOfficeStatus(
+                                                                            day,
+                                                                            officeStatus[day].status,
+                                                                            e.target.value,
+                                                                            officeStatus[day].endTime
+                                                                        )
+                                                                    }
+                                                                />
+                                                                <label>End Time:</label>
+                                                                <input
+                                                                    type="time"
+                                                                    value={officeStatus[day].endTime}
+                                                                    onChange={(e) =>
+                                                                        handleUpdateOfficeStatus(
+                                                                            day,
+                                                                            officeStatus[day].status,
+                                                                            officeStatus[day].startTime,
+                                                                            e.target.value
+                                                                        )
+                                                                    }
+                                                                />
+                                                            </div>
+                                                        )}
+                                                    </div>
+                                                ) : (
+                                                    // Display as text when not in edit mode
+                                                    officeStatus[day].status === 'In Office' ? (
+                                                        `In office from ${officeStatus[day].startTime} to ${officeStatus[day].endTime}`
+                                                    ) : (
+                                                        officeStatus[day].status
+                                                    )
+                                                )}
+                                            </td>
+                                        </tr>
+                                    ))}
+                                </tbody>
                         </Table>
                     </div>
                 </div>

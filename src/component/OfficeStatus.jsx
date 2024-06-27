@@ -73,32 +73,38 @@ const OfficeStatus = ({ isEditMode }) => {
                                                         </select>
                                                         {officeStatus[day].status === 'In Office' && (
                                                             <div>
-                                                                <label>Start Time:</label>
-                                                                <input
-                                                                    type="time"
-                                                                    value={officeStatus[day].startTime}
-                                                                    onChange={(e) =>
-                                                                        handleUpdateOfficeStatus(
-                                                                            day,
-                                                                            officeStatus[day].status,
-                                                                            e.target.value,
-                                                                            officeStatus[day].endTime
-                                                                        )
-                                                                    }
-                                                                />
-                                                                <label>End Time:</label>
-                                                                <input
-                                                                    type="time"
-                                                                    value={officeStatus[day].endTime}
-                                                                    onChange={(e) =>
-                                                                        handleUpdateOfficeStatus(
-                                                                            day,
-                                                                            officeStatus[day].status,
-                                                                            officeStatus[day].startTime,
-                                                                            e.target.value
-                                                                        )
-                                                                    }
-                                                                />
+                                                                
+                                                                <div className="time-container">
+                                                                    <label className="time-label">Start Time:</label>
+                                                                    <input
+                                                                        type="time"
+                                                                        value={officeStatus[day].startTime}
+                                                                        onChange={(e) =>
+                                                                            handleUpdateOfficeStatus(
+                                                                                day,
+                                                                                officeStatus[day].status,
+                                                                                e.target.value,
+                                                                                officeStatus[day].endTime
+                                                                            )
+                                                                        }
+                                                                    />
+                                                                </div>
+                                                                <div className="time-container">
+                                                                    <label className="time-label">End Time:</label>
+                                                                    <input
+                                                                        type="time"
+                                                                        value={officeStatus[day].endTime}
+                                                                        onChange={(e) =>
+                                                                            handleUpdateOfficeStatus(
+                                                                                day,
+                                                                                officeStatus[day].status,
+                                                                                officeStatus[day].startTime,
+                                                                                e.target.value
+                                                                            )
+                                                                        }
+                                                                    />
+                                                                </div>
+                                                                
                                                             </div>
                                                         )}
                                                     </div>

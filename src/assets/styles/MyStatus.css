@@ -1,0 +1,36 @@
+h2 {
+    text-align: center;
+}
+.my-status {
+    max-height: 35rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(98, 98, 98, 0.486) transparent;
+}
+
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.col {
+    margin-right: 10px; /* Add some spacing between columns */
+}
+
+
+div.custom-dropdown {
+    width: 210px;
+}
+
+/*changes to put save buttons in the center*/
+
+.save-btns{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+    align-items: center;
+    margin-left: 20%;
+    margin-right: 20%;
+}

@@ -1,0 +1,98 @@
+
+.legend{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+    gap: 10px;
+    margin-bottom: 25px;
+    margin-left: 10%;
+}
+
+.color{
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+}
+
+.tag-info{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.label{
+    font-size: 14px;
+}
+
+.user-icons {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 10px;
+}
+
+.user {
+    position: relative;
+    text-align: center;
+}
+
+
+.user img {
+    display: block;
+    margin:0 auto;
+    width: 80px;
+    height: auto;
+    border: 4px solid;
+    border-radius: 50%;
+}
+
+.hover-user{
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 1;
+    font-size: 12px;
+    height: 15px;
+    width: 120px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 200%);
+    text-align: center;
+}
+.blank{
+    margin-bottom: 30px;
+}
+
+.days-group {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 16px;
+    flex-wrap: wrap; 
+}
+
+.day-btn{
+    height: 30px;
+    width: 30px;
+    transform: translateY(40%);
+}
+
+.tools-o{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    flex-wrap: wrap; 
+}
+
+.remote-label{
+    font-size: 13px;
+    transition: opacity 0.3s ease-in-out;
+    transform: translateY(20%);
+}
+
+.remote-toggle{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap; 
+    transform: translateY(30%);
+}

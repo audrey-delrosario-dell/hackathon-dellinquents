@@ -1,0 +1,8 @@
+.section {
+    background-color: #DCDCDC;
+    height: 100%;
+    width: 100%;
+    padding: 2%;
+    border-radius: 1%;
+    box-shadow: 5px 6px 7px rgba(0, 0, 0, 0.215);
+}

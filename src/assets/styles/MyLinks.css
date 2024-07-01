@@ -1,0 +1,24 @@
+
+h1 {
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+
+.my-links {
+    max-height: 35em;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(98, 98, 98, 0.486) transparent;
+}
+
+.btn-add-link {
+    background-color: var(--blueDell);
+    text-align: center;
+    color: white;
+    border: 0;
+    height: 2.2rem;
+    border-radius: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+}

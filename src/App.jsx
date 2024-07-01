@@ -1,16 +1,16 @@
-import Header from "./component/Header"
-import LunchedIn from './component/LunchedIn';
-import MyLinks from "./component/MyLinks";
-import MyStatus from "./component/MyStatus";
-import OfficedIn from "./component/OfficedIn";
+import Header from "./component/Header";
+import Quadrant from './component/Quadrant';
+import UserMenu from './component/UserMenu';
 
-function App() {
+import "./assets/styles/App.css";
 
-  return (
-    <div>
-      <Header/>
-    </div>
-  )
-}
+const App = () => {
+    return (
+        <div>
+          <Header/>
+          <Quadrant/>
+        </div>
+    );
+};
 
-export default App
+export default App;

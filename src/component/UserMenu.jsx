@@ -125,7 +125,7 @@ function Example() {
       if (i === index) {
         return {
           ...employee,
-          starColor: employee.starColor === "grey" ? "#e6ac28" : "grey",
+          starColor: employee.starColor === "grey" ? "#b36f00" : "grey",
         };
       }
       return employee;
@@ -153,7 +153,7 @@ function Example() {
         show={show}
         onHide={handleClose}
         backdropClassName="bg-light"
-        style={{ backgroundColor: "#DCDCDC" }}
+        style={{ backgroundColor: "#f0f0f0" }}
       >
         <Offcanvas.Header closeButton>
           <Offcanvas.Title style={{ fontSize: "18px", color: "#0076ce" }}>
@@ -205,7 +205,7 @@ function Example() {
                 borderLeft: "0px",
                 borderRight: "0px",
                 borderColor: "#C0C0C0",
-                backgroundColor: "#DCDCDC",
+                backgroundColor: "#f0f0f0",
                 margin: "0", 
                 padding: "0", 
               }}

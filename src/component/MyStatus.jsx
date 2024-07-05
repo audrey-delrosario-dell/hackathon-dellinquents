@@ -1,11 +1,12 @@
 // Top Right Section 
 import React, { useEffect, useRef, useState } from 'react';
-import {DDSRadioButton, DDSRadioGroup, DDSButton} from "@dds/react";
+import {DDSButton} from "@dds/react";
 import "../assets/styles/MyStatus.css";
 import LunchStatus from './LunchStatus';
 import OfficeStatus from './OfficeStatus';
 import TagRadioBtnGroup from './TagRadioBtnGroup';
 import TagsSection from './TagsSection';
+import Button from './Button';
 
 const MyStatus = () => {
     const radioBtnRef = useRef(null);
@@ -46,9 +47,9 @@ const MyStatus = () => {
             {/* Tags Section  */}
             <TagsSection isEditMode={!showSavedBtn}/>
             <div className='save-btns'>
-                <DDSButton kind="secondary" size="sm" onClick={handleClickEdit} className="edit-stat-btn">Edit Status</DDSButton>
-                {!showSavedBtn && (<DDSButton size="sm" onClick={handleClickSave}>Save Changes</DDSButton>)}
-                {showSavedBtn && (<DDSButton icon="check" iconPlacement="end" size="sm" className="savedBtn" >Changes Saved</DDSButton>)}
+                
+                {!showSavedBtn && (<Button onClick={handleClickSave} className='std' label='Save Changes' />)}
+                {showSavedBtn && (<Button onClick={handleClickEdit} className="outline" label='Edit Status'/>)}
             </div>
             
 

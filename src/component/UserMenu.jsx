@@ -139,7 +139,7 @@ function Example() {
     setFilterOn(!isFilterOn);
   
     if (!isFilterOn) {
-      setFilteredEmployees(employees.filter(employee => employee.starColor === "#e6ac28"));
+      setFilteredEmployees(employees.filter(employee => employee.starColor === "#b36f00"));
     } else {
       setFilteredEmployees(employees);
     }

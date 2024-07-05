@@ -9,8 +9,8 @@ Winning **1st place** in Dell's EMEA Intern Hackathon, Inten Nexus is a React an
 - Made using React, Node & Bootstrap 
 - Used Dell Design Components to ensure the website is of **Level AA Web Content Accessibility Guidelines (WCAG)**
 
-### ** Please Note ** 
-- As these were made under the Dell Organisation using Dell Components, people **outside** of this organisation are **not able** to run this project
+### Note 
+As this project was made under the Dell Organisation using Dell Components, people **outside** of this organisation are **not able** to run this project
 
 ## Features
 - View which users are working **in office** or **remote** on any given day of the week 
@@ -27,7 +27,6 @@ Winning **1st place** in Dell's EMEA Intern Hackathon, Inten Nexus is a React an
 ![whole-ui-completed](https://github.com/audreydel/Intern-Nexus/assets/124182372/63ee8931-6c05-4d35-b70e-a8d0cb830a9c)
 
 **View, Search & Favourite Users**
-
-![user-status-popup](https://github.com/audreydel/Intern-Nexus/assets/124182372/881266fd-9a14-4b4b-a02f-1bc27155caf1)
-![user-menu-search](https://github.com/audreydel/Intern-Nexus/assets/124182372/0a7a720f-7b0f-45ef-a545-ee8d332b7a91)
 ![user-menu-favourites](https://github.com/audreydel/Intern-Nexus/assets/124182372/75f3d85c-fa36-4633-bcf9-9aa55a8ae73b)
+![user-menu-search](https://github.com/audreydel/Intern-Nexus/assets/124182372/0a7a720f-7b0f-45ef-a545-ee8d332b7a91)
+![user-status-popup](https://github.com/audreydel/Intern-Nexus/assets/124182372/881266fd-9a14-4b4b-a02f-1bc27155caf1)

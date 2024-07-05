@@ -1,6 +1,11 @@
 import React from "react";
 import { DDSRadioButton, DDSRadioGroup } from "@dds/react";
 import "../assets/styles/TagRadioBtnGroup.css";
+import RadioButton from "./RadioButton";
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import { CollectionPlay } from "react-bootstrap-icons";
 
 const TagRadioBtnGroup = ({ isEditMode, selectedTag, handleTagChange }) => {
     const tagOptions = [
@@ -10,31 +15,29 @@ const TagRadioBtnGroup = ({ isEditMode, selectedTag, handleTagChange }) => {
         { value: "game", label: "Game/Pool" },
         { value: "work buddy", label: "Work Buddy" },
     ];
-
     return (
-        <div>
+        <Container>
+            <Row>
             {isEditMode ? 
-                (
-                    <DDSRadioGroup legend="" className="btnGroup">
-                        {tagOptions.map((option) => (
-                            <DDSRadioButton
-                                key={option.value}
-                                name="radio"
-                                value={option.value}
-                                label={option.label}
-                                size="sm"
-                                checked={selectedTag === option.value}
-                                onChange={() => handleTagChange(option.value)}
+                ( tagOptions.map((option) => (
+                        <Col md='auto'>
+                            {/* *** THESE BUTTON WILL SAVE THE DATA BUT THE CIRCLE WONT CHANGE COLOURS **** */}
+                            <RadioButton
+                            value={option.value}
+                            label={option.label}
+                            checked={selectedTag === option.value}
+                            onChange={() => handleTagChange(option.value)}
                             />
-                        ))}
-                    </DDSRadioGroup>
-                )
+                        </Col>
+                    )))
                 :
-                (
-                    <p className="selected-tag" style={{fontWeight:"bold"}}>{selectedTag}</p>
-                )
+                (<p className="selected-tag" style={{fontWeight:"bold"}}>{selectedTag}</p>)
             }
-        </div>
+                <Col>
+
+                </Col>
+            </Row>
+        </Container>
     );
 };
 

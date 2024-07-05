@@ -30,3 +30,12 @@ As this project was made under the Dell Organisation using Dell Components, peop
 ![user-menu-favourites](https://github.com/audreydel/Intern-Nexus/assets/124182372/75f3d85c-fa36-4633-bcf9-9aa55a8ae73b)
 ![user-menu-search](https://github.com/audreydel/Intern-Nexus/assets/124182372/0a7a720f-7b0f-45ef-a545-ee8d332b7a91)
 ![user-status-popup](https://github.com/audreydel/Intern-Nexus/assets/124182372/881266fd-9a14-4b4b-a02f-1bc27155caf1)
+
+## Running
+
+Running this project *(for those with organisation access)*
+```bash
+  npm install 
+  npm run dev
+```
+    

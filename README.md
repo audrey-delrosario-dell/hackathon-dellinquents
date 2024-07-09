@@ -10,7 +10,7 @@ Winning **1st place** in Dell's EMEA Intern Hackathon, Inten Nexus is a React an
 - Used Dell Design Components to ensure the website is of **Level AA Web Content Accessibility Guidelines (WCAG)**
 
 ### Note 
-As this project was made under the Dell Organisation using Dell Components, people <u>**outside**</u> of this organisation are <u>**not able**</u> to run this project
+As this project was made under the Dell Organisation using Dell Components, people <u> **outside** </u> of this organisation are <u>**not able**</u> to run this project
 
 ## Features
 - View which users are working **in office** or **remote** on any given day of the week 
